@@ -3,42 +3,64 @@ const arrayTeam = [
         
         nome: "Wayne Barnett",
         ruolo: "Founder & CEO",
-        immagine: "wayne-barnett-founder-ceo.jpg",
+        immagine: "assets/img/wayne-barnett-founder-ceo.jpg",
     },
 
     {
          
         nome: "Angela Caroll",
         ruolo: "Chief Editor",
-        immagine: "angela-caroll-chief-editor.jpg",
+        immagine: "assets/img/angela-caroll-chief-editor.jpg",
 
     },
 
     {
         nome: "Walter Gordon",
         ruolo: "Office Manager",
-        immagine: "walter-gordon-office-manager.jpg",
+        immagine: "assets/img/walter-gordon-office-manager.jpg",
 
     },
     {
         nome: "Angela Lopez",
         ruolo: "Social Media Manager",
-        immagine: "angela-lopez-social-media-manager.jpg",
+        immagine: "assets/img/angela-lopez-social-media-manager.jpg",
 
     },
     {
         nome: "Scott Estrada",
         ruolo: "Developer",
-        immagine: "scott-estrada-developer.jpg",
+        immagine: "assets/img/scott-estrada-developer.jpg",
 
     },
     {
         nome: "Barbara Ramos",
         ruolo: "Graphic Designer",
-        immagine: "barbara-ramos-graphic-designer.jpg",
+        immagine: "assets/img/barbara-ramos-graphic-designer.jpg",
 
     }
   
 ]
 console.log(arrayTeam)
 
+for(let i = 0; i < arrayTeam.length; i++){
+
+let oggetti = arrayTeam[i]
+
+
+document.querySelector("main  .row").innerHTML += `
+<div class="card" style="width: 18rem;">
+
+<img src=./${oggetti.immagine} class="card-img-top" alt="">
+
+<div class="card-body">
+
+  <h5 class="card-title">${oggetti.nome}</h5>
+
+  <p class="card-text">${oggetti.ruolo}</p>
+  
+</div>
+</div>
+`
+
+
+}
